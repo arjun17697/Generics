@@ -1,12 +1,22 @@
 package main;
 
-public class generic {
+public class generic<T extends Comparable<T>> {
+	private T[] inputArray;
 
-	public static <T extends Comparable<T>> T max(T... array) {
-		T max = array[0];
+	public generic(T[] inputArray) {
+		this.inputArray = inputArray;
+	}
+
+	public void max() {
+		generic.max(this.inputArray);
+
+	}
+
+	public static <T extends Comparable<T>> T max(T... inputArray) {
+		T max = inputArray[0];
 		for (int i = 0; i < 3; i++) {
-			if (array[(int) i].compareTo(max) > 0) {
-				max = array[i];
+			if (inputArray[(int) i].compareTo(max) > 0) {
+				max = inputArray[i];
 			}
 		}
 		return max;
