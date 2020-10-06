@@ -60,4 +60,28 @@ public class GenericJunit {
 		Assert.assertEquals(9.99f, result, 0.000);
 
 	}
+	
+	@Test
+	public void returnmaxstring1() {
+		generic tester = new generic();
+		String[] stringArray = new String[] { "peach", "banana", "apple" };
+		String result = generic.maxString_uc3(stringArray);
+		Assert.assertEquals("peach", result);
+
+	}
+	@Test
+	public void returnmaxstring2() {
+		generic tester = new generic();
+		String[] stringArray = new String[] { "arjun", "banana", "apple" };
+		String result = generic.maxString_uc3(stringArray);
+		Assert.assertEquals("banana", result);
 }
+	@Test
+	public void returnmaxstring3() {
+		generic tester = new generic();
+		String[] stringArray = new String[] { "arjun", "banana", "simran" };
+		String result = generic.maxString_uc3(stringArray);
+		Assert.assertEquals("simran", result);
+}
+}
+
